@@ -1,0 +1,10 @@
+language: swift
+osx_image: xcode9.2
+xcode_project: src/src.xcodeproj
+
+before_install:
+- brew update
+- brew install tailor
+
+script:
+- tailor --max-severity=error src/
